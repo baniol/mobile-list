@@ -1,0 +1,52 @@
+form.std-edit-form{
+	width:90%;
+	text-align:center;
+	margin:0 auto;
+
+	input[type=text]{
+		padding:5px 8px;
+		font-size: 2rem;
+		background-color: transparent; 
+		border-style: solid; 
+		border-width: 0px 0px 1px 0px; 
+		border-color: $header-bg-color;
+		outline:none;
+	}
+
+	.form-group{
+		display: inline-block;
+		&.submit{
+			font-size:4.5rem;
+			color:$button-ok;
+		}
+	}
+}
+
+.std-button{
+	border:0;
+	font-size:4.6rem;
+
+	&.error{
+		color:$button-remove;
+	}
+}
+
+// buttons
+
+.menu-button{
+	border:0;
+	color:#eee;
+	background-color:transparent;
+	font-size:3.6rem;
+	float:left;
+	margin:5px 0 0 10px;
+}
+
+.menu-button-right{
+	border:0;
+	color:#eee;
+	background-color:transparent;
+	font-size:3.6rem;
+	float:right;
+	margin:5px 10px 0 0px;
+}

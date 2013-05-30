@@ -1,0 +1,29 @@
+input,textarea{
+	-webkit-user-modify: read-write-plaintext-only;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+.fLeft{
+	float:left;
+	&.m-left{
+		@include margin-hor(left,2);
+	}
+}
+.fRight{
+	float:right;
+	&.m-right{
+		@include margin-hor(right,2);
+	}
+}
+.clear{
+	@include clear;
+}
+
+// animations
+.animate {
+  -webkit-transition: all .3s ease-out;
+}

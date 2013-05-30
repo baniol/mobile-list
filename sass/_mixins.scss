@@ -1,0 +1,49 @@
+@mixin trim{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+// media queries
+@mixin mobile-width($min-width: 321px, $max-width: 480px) {
+	@media all and (min-width : #{$min-width}) and (max-width : #{$max-width}) {
+		@content;
+	}
+}
+
+@mixin box-shadow ($x: 0, $y: 0, $blur: 6px, $distance: 0, $color: #000, $inset: ""){
+	@include vendorize("box-shadow", #{$inset} $x $y $blur $distance $color);
+}
+
+@mixin text-shadow($color: #212121, $x:1px, $y:1px, $blur: 4px){
+	@include vendorize("text-shadow",$color $x $y $blur);
+}
+
+@mixin clear() {
+	&:before, &:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin bg-gradient() {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+}
+
+// horizontal padding
+@mixin margin-hor($side,$value){
+	margin-#{$side}:$value+rem;
+}

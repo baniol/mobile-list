@@ -1,0 +1,91 @@
+.main-list{
+	list-style: none;
+	padding: 0 0 20px 0 ;
+	li{
+		position: relative;
+
+		a{
+			background-color: #FFFFFF;
+			border: 1px solid #999999;
+			color: #222222;
+			display: block;
+			font-size: 1.6rem;
+			font-weight: bold;
+			margin-bottom: -1px;
+			padding: 2.4rem 1rem;
+			text-decoration: none;
+			
+			&.active{
+				background-color:#bbb;
+			}
+		}
+		.chevron{
+			position: absolute;
+			right: 0.4rem;
+			top: 0.7rem;
+			padding: 18px 28px 20px 21px;
+		}
+
+		&.dragged a{
+			background-color:red;
+		}
+	}
+}
+
+#controls{
+	position:absolute;
+	@include box-shadow;
+	top:40%;
+	left:20%;
+	right:20%;
+	background-color:#aaa;
+	border-radius:3px;
+	height:100px;
+	list-style:none;
+	z-index:30;
+	span{
+		color:white;
+		font-size: 5rem;
+		margin-top:1rem;
+		&.delete{
+			margin-left:1rem;
+		}
+		&.edit{
+			margin-right:1rem;
+		}
+	}
+	.control-hover{
+		color:red;
+	}
+}
+
+@media all and (max-width : 639px) {
+	position:absolute;
+	@include box-shadow;
+	top:10%;
+	left:20%;
+	right:20%;
+	background-color:#aaa;
+	border-radius:3px;
+	height:100px;
+	list-style:none;
+	z-index:30;
+	span{
+		color:white;
+		font-size: 5rem;
+		margin-top:1rem;
+		&.delete{
+			margin-left:1rem;
+		}
+		&.edit{
+			margin-right:1rem;
+		}
+	}
+	.control-hover{
+		color:red;
+	}
+}
+
+.dragged_element{
+	width:60px !important;
+}

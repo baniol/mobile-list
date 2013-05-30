@@ -1,0 +1,88 @@
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+html{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-text-size-adjust: none;
+	font-size:62.5%;
+	@include mobile-width(321px,480px){
+		font-size:100%;
+	}
+}
+
+body {
+	// background:url(../images/grey_wash_wall.png);
+	background-color:#2A2142;
+	margin:0;
+	padding:0;
+	font-size:1.6rem;
+}
+
+#header{
+	height:$header-height;
+	color:#222;
+	text-align:center;
+	background-color:$header-bg-color;
+	.title{
+		display: inline-block;
+		font-size: 3rem;
+		color: #fff;
+		padding: 7px 0 0 0;
+		width:60%;
+		@include trim;
+	}
+}
+
+#viewport{
+	position:relative;
+	z-index: 99;
+	overflow: hidden;
+	display: block;
+	// float:left;
+}
+
+#wrapper{
+	position:absolute;
+	// z-index:100;
+	// overflow:auto;
+	top:$header-height;
+	left:0
+}
+
+#content{
+	position:relative;
+	z-index: 99;
+	overflow: auto;
+	display: block;
+	float:left;
+	height:100%;
+}
+
+#options{
+	position:relative;
+	z-index: 99;
+	overflow: auto;
+	display: block;
+	float:left;
+	background-color:#eee;
+	height:100%;
+	text-align:center;
+}
+
+
+// #footer{
+// 	height:$footer-height;
+// 	position:fixed;
+// 	bottom:0;
+// 	left:0;
+// 	right:0;
+// 	z-index:100;
+// 	@include box-shadow;
+// 	color:#222;
+// 	text-shadow: 0px 1px 0px #fff;
+// 	@include bg-gradient;
+// 	padding:0.16rem 0 0 0;
+// }

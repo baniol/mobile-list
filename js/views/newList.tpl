@@ -1,0 +1,1 @@
+<input type="text" id="new-list-input" class="std-input" />
